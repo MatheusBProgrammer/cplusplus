@@ -1,17 +1,15 @@
 #include <iostream>
-#include <string>
+#include <cstdlib>
+#include <ctime>
 
-using namespace std;
+int main()
 
-int main() {
-
-    string frase;
-
-
-    cout<<"Digite uma frase: ";
-    getline(cin,frase);
-    cout<<frase;
-
+{
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    for (int i = 0; i < 5; ++i)
+    {
+        std::cout << rand() % 10 << std::endl;
+    }
 
     return 0;
 }
